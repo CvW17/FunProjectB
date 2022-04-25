@@ -1,0 +1,44 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+   <form method="post">
+        <select asp-items = "Model.Continents" onchange = "setContinent(this)" value = "" id = "Continent">Select a Continent</select>
+
+        <select asp-items = "Model.Countries" id="Country">Select a Country</select>
+
+        <select asp-items = "Model.Cities" id="City">Select a City</select>
+    </form>
+
+    @*<script>
+        $(document).ready(function()
+        {
+            var country = $("#Country").data(),
+                continents = $("#Continent").data(),
+                city = $("#City").data();
+
+                $("#get").click(functio()
+                {
+                    var continentInfo = "\Continent: { id: " + continents.value() + "Continent: " + continents.text() + "}",
+                        countryInfo = "\Country: { id: " + country.value() + "Country: " + country.text() + "}",
+                        cityInfo = "\City: { id: " + city.value() + "Cityt: " + city.text() + "}";
+
+                    
+                });
+        });
+
+        function filterCountry()
+        {
+            return country : $("#country").val()
+        };
+
+        function filterCity()
+        {
+            return city : $("#city").val()
+        };
+    </script>*@
+</div>

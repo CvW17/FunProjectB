@@ -1,0 +1,37 @@
+﻿@page
+@model FunProjectB.Pages.City.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Cities</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cities.City)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cities.City)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cities.ContinentsID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cities.ContinentsID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cities.CountriesID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cities.CountriesID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Cities.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
